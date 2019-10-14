@@ -3,9 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import VueHighlightJS from "vue-highlightjs";
+import "highlight.js/styles/atom-one-dark.css";
 
 Vue.use(VueHighlightJS);
-
 Vue.config.productionTip = false;
 
 new Vue({

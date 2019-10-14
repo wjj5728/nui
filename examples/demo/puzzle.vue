@@ -1,6 +1,10 @@
 <template>
   <div>
-    <DemoBlock :title="'九宫格拼图'" :sourcecode="sourcecode">
+    <DemoBlock
+      :title="'九宫格拼图'"
+      :sourcecode="sourcecode"
+      :des="'canvas版本的拼图'"
+    >
       <div slot="demo">
         <Puzzle
           ref="Puzzle"
@@ -24,7 +28,8 @@ import Puzzle from "../../package/puzzle/src/main";
 export default {
   data() {
     return {
-      sourcecode: `<template>
+      sourcecode: `
+            <template>
               <Puzzle
                 ref="Puzzle"
                 class="puzzle"
