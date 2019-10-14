@@ -1,0 +1,45 @@
+[{
+    "name": "介绍",
+    "component": "des"
+  },
+  {
+    "name": "开发指南",
+    "children": [{
+      "name": "安装",
+      "component": "build"
+    }]
+  }, {
+    "name": "组件",
+    "groups": [{
+      "groupName": "基础",
+      "list": [{
+          "name": "九宫格拼图",
+          "component": "puzzle"
+        },
+        {
+          "name": "吐司提示",
+          "component": "toast"
+        },
+        {
+          "name": "基础组件1",
+          "component": "component1"
+        },
+        {
+          "name": "基础组件2",
+          "component": "component2"
+        }
+      ]
+    }, {
+      "groupName": "表单",
+      "list": [{
+          "name": "表单组件1",
+          "component": "component1"
+        },
+        {
+          "name": "表单组件2",
+          "component": "component2"
+        }
+      ]
+    }]
+  }
+]
