@@ -1,3 +1,4 @@
+import "../public/iconfont/iconfont.css";
 import Toast from "./toast";
 import Puzzle from "./puzzle/";
 // 所有组件列表

@@ -6,11 +6,20 @@
       <div class="case">
         <slot name="demo"></slot>
       </div>
-      <div class="code" v-if="sourcecode" :style="{ maxHeight: isShow ? '2000px' : '0' }">
+      <div
+        class="code"
+        v-if="sourcecode"
+        :style="{ maxHeight: isShow ? '2000px' : '0' }"
+      >
         <!-- <pre v-highlightjs="sourcecode"><code class="javascript"></code></pre> -->
-        <pre v-highlightjs><code class="javascript">{{Trim(sourcecode)}}</code></pre>
+        <pre
+          v-highlightjs
+        ><code class="javascript">{{Trim(sourcecode)}}</code></pre>
       </div>
-      <div class="demo-btn" @click="isShow = !isShow"></div>
+      <div class="demo-btn" @click="isShow = !isShow">
+        <i class="nuii" :class="isShow ? 'nui-caret-up' : 'nui-caret-down'"></i>
+        <span>{{ isShow ? "展示代码" : "收起代码" }}</span>
+      </div>
     </div>
   </div>
 </template>

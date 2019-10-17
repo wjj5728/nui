@@ -13,8 +13,12 @@
     "groups": [{
       "groupName": "基础",
       "list": [{
+          "name": "常用图标",
+          "component": "demo-icon"
+        },
+        {
           "name": "九宫格拼图",
-          "component": "puzzle"
+          "component": "demo-puzzle"
         },
         {
           "name": "吐司提示",
