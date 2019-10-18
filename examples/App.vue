@@ -60,6 +60,12 @@ div:hover {
     display: block;
   }
 }
+
+a:link,
+a:visited,
+a:hover {
+  color: #66cccc;
+}
 #app {
   font-family: 微软雅黑;
   -webkit-font-smoothing: antialiased;

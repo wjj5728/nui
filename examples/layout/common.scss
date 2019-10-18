@@ -11,11 +11,27 @@
 }
 
 .demo-tip {
-  padding: 28px 16px;
+  padding: 10px 16px;
   background-color: #ecf8ff;
   border-radius: 4px;
   border-left: 5px solid #66cccc;
   margin: 20px 0;
+
+  p {
+    margin: 10px 0;
+  }
+}
+
+.demo-code-block {
+  line-height: 1.8;
+  font-family: Menlo, Monaco, Consolas, Courier, monospace;
+  font-size: 12px;
+  padding: 18px 24px;
+  background-color: #fafafa;
+  border: 1px solid #eaeefb;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  -webkit-font-smoothing: auto;
 }
 
 .demo-table-title {

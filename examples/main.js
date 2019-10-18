@@ -6,6 +6,7 @@ import Nui from "../package/index";
 import VueHighlightJS from "vue-highlightjs";
 import "highlight.js/styles/atom-one-dark.css";
 import "./layout/common.scss";
+import "animate.css";
 
 Vue.use(VueHighlightJS);
 Vue.use(Nui);

@@ -2,7 +2,11 @@
   <div class="wrap-demoblock">
     <header class="demoblock-title">{{ title }}</header>
     <p class="demoblock-des" v-if="des">{{ des }}</p>
-    <div class="demo-block">
+    <div
+      class="demo-block"
+      @mouseover="isHover = true"
+      @mouseleave="isHover = false"
+    >
       <div class="case">
         <slot name="demo"></slot>
       </div>
@@ -16,9 +20,13 @@
           v-highlightjs
         ><code class="javascript">{{Trim(sourcecode)}}</code></pre>
       </div>
-      <div class="demo-btn" @click="isShow = !isShow">
+      <div
+        class="demo-btn"
+        @click="isShow = !isShow"
+        :class="isHover ? 'ishover' : ''"
+      >
         <i class="nuii" :class="isShow ? 'nui-caret-up' : 'nui-caret-down'"></i>
-        <span>{{ isShow ? "展示代码" : "收起代码" }}</span>
+        <span>{{ isShow ? "隐藏代码" : "显示代码" }}</span>
       </div>
     </div>
   </div>
@@ -26,7 +34,7 @@
 
 <script>
 export default {
-  name: "demoBlock",
+  name: "demo-block",
   props: {
     title: {
       required: true,
@@ -43,7 +51,8 @@ export default {
   },
   data() {
     return {
-      isShow: false
+      isShow: false,
+      isHover: false
     };
   },
   methods: {
@@ -110,6 +119,7 @@ export default {
     position: relative;
     margin-top: -1px;
     height: 44px;
+    line-height: 44px;
     box-sizing: border-box;
     background-color: #fff;
     border-top: 1px solid #eaeefb;
@@ -117,6 +127,31 @@ export default {
     border-bottom-right-radius: 4px;
     text-align: center;
     color: #d3dce6;
+    text-align: center;
+    i {
+      transition: 0.3s;
+      display: inline-block;
+    }
+    span {
+      transition: 0.3s;
+      opacity: 0;
+      transform: translateX(10px);
+      font-size: 14px;
+      display: inline-block;
+    }
+    &:hover {
+      background-color: #f9fafc;
+    }
+  }
+  .ishover {
+    color: #66cccc;
+    i {
+      transform: translateX(-40px);
+    }
+    span {
+      transform: translateX(-30px);
+      opacity: 1;
+    }
   }
 }
 </style>
