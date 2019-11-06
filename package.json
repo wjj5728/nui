@@ -1,11 +1,11 @@
 {
-  "name": "nui",
+  "name": "nui-ui",
   "version": "0.1.0",
   "private": false,
   "main": "package/index.js",
   "style": "lib/nui.css",
   "files": [
-    "components",
+    "lib",
     "package"
   ],
   "scripts": {
