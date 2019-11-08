@@ -4,7 +4,7 @@
 <script>
 import Puzzle from "./Puzzle";
 export default {
-  name: "puzzle",
+  name: "NuiPuzzle",
   props: {
     imgUrl: {
       required: true,

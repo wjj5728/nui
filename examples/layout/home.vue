@@ -9,26 +9,20 @@
           <header
             v-if="!item.children && !item.groups"
             @click="component = item.component"
-          >
-            {{ item.name }}
-          </header>
+          >{{ item.name }}</header>
           <header v-if="item.children || item.groups">{{ item.name }}</header>
           <ul v-if="item.children">
             <li
               v-for="(child, j) in item.children"
               :key="j"
               @click="component = child.component"
-            >
-              {{ child.name }}
-            </li>
+            >{{ child.name }}</li>
           </ul>
           <ul v-if="item.groups">
             <li v-for="(group, j) in item.groups" :key="j">
               <div class="group-name">{{ group.groupName }}</div>
               <ul v-for="(groupitem, z) in group.list" :key="z">
-                <li @click="component = groupitem.component">
-                  {{ groupitem.name }}
-                </li>
+                <li @click="component = groupitem.component">{{ groupitem.name }}</li>
               </ul>
             </li>
           </ul>

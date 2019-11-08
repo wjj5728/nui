@@ -4,7 +4,7 @@ import router from "./router";
 import store from "./store";
 import Nui from "../package/index";
 import VueHighlightJS from "vue-highlightjs";
-import "highlight.js/styles/atom-one-dark.css";
+// import "highlight.js/styles/a11y-light.css";
 import "./layout/common.scss";
 import "animate.css";
 

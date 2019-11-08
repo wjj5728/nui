@@ -1,8 +1,12 @@
 <template>
   <div>
-    <demo-block :title="'九宫格拼图'" :sourcecode="sourcecode" :des="'canvas版本的拼图'">
+    <demo-block
+      :title="'九宫格拼图'"
+      :sourcecode="sourcecode"
+      :des="'canvas版本的拼图'"
+    >
       <div slot="demo">
-        <Puzzle
+        <nui-puzzle
           ref="Puzzle"
           class="puzzle"
           width="400"
@@ -12,15 +16,29 @@
           @every="every"
           @success="success"
           @fail="fail"
-        ></Puzzle>
+        ></nui-puzzle>
         <p class="step">剩余步数：{{ step }}</p>
         <div class="vip" @click="vip">一键完成</div>
         <div class="again" @click="again">重新开始</div>
       </div>
     </demo-block>
-    <demo-table :title="'API'" :introduction="'属性说明：'" :data="api"></demo-table>
-    <demo-table :title="'事件'" :introduction="'事件说明：'" :data="event" :type="'event'"></demo-table>
-    <demo-table :title="'内部方法'" :introduction="'事件说明：'" :data="method" :type="'method'"></demo-table>
+    <demo-table
+      :title="'API'"
+      :introduction="'属性说明：'"
+      :data="api"
+    ></demo-table>
+    <demo-table
+      :title="'事件'"
+      :introduction="'事件说明：'"
+      :data="event"
+      :type="'event'"
+    ></demo-table>
+    <demo-table
+      :title="'内部方法'"
+      :introduction="'事件说明：'"
+      :data="method"
+      :type="'method'"
+    ></demo-table>
     <!-- @every="every"
         @success="success"
     @fail="fail"-->
@@ -30,7 +48,6 @@
 <script>
 import DemoBlock from "../layout/article/demo-block";
 import DemoTable from "../layout/article/demo-table";
-import Puzzle from "../../package/puzzle/src/main";
 export default {
   data() {
     return {
@@ -163,7 +180,6 @@ export default {
     }
   },
   components: {
-    Puzzle,
     DemoBlock,
     DemoTable
   }

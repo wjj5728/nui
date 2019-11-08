@@ -9,6 +9,7 @@ module.exports = {
     }
   },
   chainWebpack: config => {
+    config.resolve.set("symlinks", false);
     // vue默认@指向src目录，这里要修正为examples，另外新增一个~指向packages
     config.resolve.alias
       .set("@", path.resolve("examples"))
@@ -28,4 +29,9 @@ module.exports = {
         return options;
       });
   }
+  // configureWebpack: {
+  //   resolve: {
+  //     symlinks: true
+  //   }
+  // }
 };

@@ -18,7 +18,7 @@
         <!-- <pre v-highlightjs="sourcecode"><code class="javascript"></code></pre> -->
         <pre
           v-highlightjs
-        ><code class="javascript">{{Trim(sourcecode)}}</code></pre>
+        ><code class="highlight">{{Trim(sourcecode)}}</code></pre>
       </div>
       <div
         class="demo-btn"
@@ -113,6 +113,9 @@ export default {
     transition: max-height 0.5s ease-out;
     overflow: hidden;
     max-height: 0;
+    code {
+      padding: 18px 24px;
+    }
   }
   .demo-btn {
     cursor: pointer;
